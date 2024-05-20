@@ -1,0 +1,78 @@
+.feedback-form {
+  width: 360px;
+  padding: 24px;
+}
+
+label {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: #2e2f42;
+}
+
+input {
+  margin: 8px 0;
+  border: 1px solid #808080;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  padding-left: 16px;
+}
+
+input:hover {
+  border: 1px solid #000000;
+}
+
+input::placeholder {
+  color: transparent;
+}
+
+input:active::placeholder {
+  color: #2e2f42;
+}
+
+input:focus::placeholder {
+  color: #2e2f42;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  padding-top: 8px;
+  padding-left: 16px;
+  height: 80px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  resize: none;
+}
+
+textarea:hover {
+  border: 1px solid #000000;
+}
+
+button {
+  width: 95px;
+  height: 40px;
+  border-radius: 8px;
+  background: #4e75ff;
+  border-color: transparent;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  text-align: center;
+}
+
+button:hover {
+  background: #6c8cff;
+}
+
+button:focus {
+  background: #6c8cff;
+}
