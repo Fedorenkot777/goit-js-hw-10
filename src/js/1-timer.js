@@ -82,4 +82,3 @@ startBtn.addEventListener("click", () => {
         startBtn.disabled = true;
     }
 });
-bfjvf
