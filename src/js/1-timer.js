@@ -1,4 +1,4 @@
-'use strict';
+
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import iziToast from 'izitoast';
@@ -81,4 +81,13 @@ function convertMs(ms) {
   const seconds = Math.floor((((ms % day) % hour) % minute) / second);
 
   return { days, hours, minutes, seconds };
+}
+// vite.config.js
+
+export default {
+  build: {
+    rollupOptions: {
+      external: ['flatpickr']
+    }
+  }
 }

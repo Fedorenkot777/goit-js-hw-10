@@ -1,5 +1,3 @@
-'use strict';
-
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
@@ -22,7 +20,7 @@ form.addEventListener('submit', function (event) {
 
   promise
     .then(delay => {
-      iziToast.show({
+      izitoast.show({
         title: '✅',
         message: `Fulfilled promise in ${delay}ms`,
         backgroundColor: '#59a10d',
@@ -38,3 +36,12 @@ form.addEventListener('submit', function (event) {
       });
     });
 });
+// vite.config.js
+
+export default {
+  build: {
+    rollupOptions: {
+      external: ['flatpickr']
+    }
+  }
+}
