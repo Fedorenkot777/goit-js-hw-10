@@ -1,21 +1,94 @@
-.header {
-  padding: 20px 0;
+body {
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
-.nav-list {
+a {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.pick-date-box {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 40px;
+  gap: 8px;
+  height: 40px;
+  margin-bottom: 32px;
 }
 
-.nav-link {
+.pick-date-input {
+  /* border-radius: 4px; */
+  width: 272px;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+
+  border: 1px solid #808080;
+  border-radius: 4px;
+  /* width: 272px; */
+  /* height: 40px; */
+}
+
+.pick-date-input:hover {
+  border: 1px solid #000;
+  /* border-radius: 4px; */
+  /* width: 272px; */
+  /* height: 40px; */
+}
+
+.pick-date-input:active {
+  border: 1px solid #4e75ff;
+}
+
+.pick-date-input:disabled {
+  color: #808080;
+  background: #fafafa;
+  border: 1px solid #808080;
+}
+
+.date-pick-btn {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 75px;
   font-weight: 500;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  /* color: #989898; */
 }
 
-.nav-link:hover,
-.nav-link:focus {
-  color: #747bff;
+.date-pick-btn:hover:active:focus {
+  background: #6c8cff;
+}
+
+.date-pick-btn:disabled {
+  background: #cfcfcf;
+  color: #989898;
+}
+
+.timer {
+  display: flex;
+  gap: 24px;
+  /* text-align: center; */
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.value {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #2e2f42;
 }

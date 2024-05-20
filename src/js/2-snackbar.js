@@ -1,48 +1,40 @@
+'use strict';
 
-const form = document.querySelector(".form");
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
-form.addEventListener("submit", event => {
+const form = document.querySelector('.form');
+
+form.addEventListener('submit', function (event) {
   event.preventDefault();
-  let delay = Number(event.currentTarget.delay.value);
+  const delay = parseInt(form.elements.delay.value);
+  const state = form.elements.state.value;
 
-  const delayInput = document.getElementById("delay");
-  const stateInputs = document.getElementsByName("state");
+  const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (state === 'fulfilled') {
+        resolve(delay);
+      } else {
+        reject(delay);
+      }
+    }, delay);
+  });
 
-  const selectedState = Array.from(stateInputs).find(
-    input => input.checked
-  ).value;
-
-  createNotification(delay, selectedState)
+  promise
     .then(delay => {
-      iziToast.success({
+      iziToast.show({
+        title: '✅',
         message: `Fulfilled promise in ${delay}ms`,
-        messageColor: "#FFFFF0",
-        backgroundColor: "green",
-        position: "topRight",
-        progressBar: false,
-        close: false,
+        backgroundColor: '#59a10d',
+        messageColor: '#FFFFFF',
       });
     })
     .catch(delay => {
-      iziToast.error({
+      iziToast.show({
+        title: '❌',
         message: `Rejected promise in ${delay}ms`,
-        messageColor: '#FFFFF0',
-        backgroundColor: "red",
-        position: "topRight",
-        progressBar: false,
-        close: false,
+        backgroundColor: '#EF4040',
+        messageColor: '#FFFFFF',
       });
     });
-
-  function createNotification(delay, state) {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        if (state === "fulfilled") {
-          resolve(delay);
-        } else {
-          reject(delay);
-        }
-      }, delay);
-    });
-  }
 });

@@ -1,35 +1,72 @@
-/* Reset styles */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
 }
 
-p:last-child {
-  margin-bottom: 0;
+fieldset {
+  display: flex;
+  gap: 48px;
+  padding: 14px 48px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  margin-bottom: 24px;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+legend {
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
 }
 
-a {
-  color: currentColor;
-  text-decoration: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-img {
+.fieldset-label {
+  float: left;
+  clear: none;
   display: block;
-  max-width: 100%;
-  height: auto;
+}
+
+input[type='radio'] {
+  float: left;
+  clear: none;
+  margin-right: 8px;
+  border: 1px solid #757575;
+  border-radius: 14px;
+  width: 20px;
+  height: 20px;
+}
+
+.submit-btn {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 360px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: #4e75ff;
+  border: none;
+}
+
+.submit-btn:hover:active:focus {
+  background: #6c8cff;
+}
+
+.delay-label {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.delay-input {
+  margin-top: 8px;
+  padding-left: 12px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 340px;
+  height: 40px;
 }
