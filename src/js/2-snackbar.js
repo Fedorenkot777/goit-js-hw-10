@@ -21,7 +21,7 @@ form.addEventListener('submit', function (event) {
 
   promise
     .then(delay => {
-      izitoast.show({
+      iziToast.show({
         title: '✅',
         message: `Fulfilled promise in ${delay}ms`,
         backgroundColor: '#59a10d',
