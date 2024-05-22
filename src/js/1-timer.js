@@ -82,12 +82,6 @@ function convertMs(ms) {
 
   return { days, hours, minutes, seconds };
 }
-// vite.config.js
 
-export default {
-  build: {
-    rollupOptions: {
-      external: ['flatpickr']
-    }
-  }
-}
+
+
